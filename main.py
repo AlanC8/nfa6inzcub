@@ -1,7 +1,5 @@
 # Imports
-import pygame
-import math
-import time
+import pygame,math,time
 import psycopg2
 import config
 import bd
@@ -253,4 +251,6 @@ while running:
         if keys[pygame.K_SPACE]:
             game_logic.restart_game()
 
+connection.commit()
+cursor.close()
 pygame.quit()
